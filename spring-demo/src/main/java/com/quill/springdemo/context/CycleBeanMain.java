@@ -1,20 +1,20 @@
 package com.quill.springdemo.context;
 
-import com.quill.springdemo.bean.Earth;
+import com.quill.springdemo.cyclebean.InitMethodEarth;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @Author: qigui.chen
  * @Date: 2020/9/4 10:12
  */
-public class CycleContext {
+public class CycleBeanMain {
 
     public static void main(String[] args) throws InterruptedException {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-cyclebean.xml");
         System.out.println("start getBean");
-        Earth bean = context.getBean(Earth.class);
+        InitMethodEarth bean = context.getBean(InitMethodEarth.class);
         System.out.println("get desc "+bean.getDesc());
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         context.registerShutdownHook();
     }
 }

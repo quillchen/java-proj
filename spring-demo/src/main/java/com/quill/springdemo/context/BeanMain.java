@@ -11,20 +11,20 @@ import java.util.Arrays;
  * @Date: 2020/9/3 9:55
  */
 @Slf4j
-public class ClassPathXmlApp {
+public class BeanMain {
 
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         Person person = context.getBean(Person.class);
-        System.out.println("person "+person);
+        System.out.println("BeanMain# person "+person);
         Person personBean = (Person) context.getBean("person");
-        System.out.println("personBean "+personBean);
+        System.out.println("BeanMain# personBean "+personBean);
         String[] aliases = context.getAliases("person");
-        System.out.println("aliases"+ Arrays.toString(aliases));
-        System.out.println("--------");
+        System.out.println("BeanMain# aliases"+ Arrays.toString(aliases));
+        System.out.println("BeanMain# --------");
         String[] beanDefinitionNames = context.getBeanDefinitionNames();
         System.out.println(Arrays.toString(beanDefinitionNames));
-        System.out.println("--------");
+        System.out.println("BeanMain# --------");
         String[] beanNamesForType = context.getBeanNamesForType(Person.class);
         System.out.println(Arrays.toString(beanNamesForType));
     }

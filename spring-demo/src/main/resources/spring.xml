@@ -14,9 +14,4 @@
         <property name="hardDisk" value="512"></property>
     </bean>
 
-    <bean class="com.quill.springdemo.bean.Earth"
-        init-method="init" destroy-method="destroy" >
-        <property name="desc" value="a great start"></property>
-    </bean>
-
 </beans>
