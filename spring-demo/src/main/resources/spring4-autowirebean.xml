@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class="com.quill.springdemo.p4.autowiredbean.Computer" id="comp">
+        <property name="memory" value="16"></property>
+        <property name="hardDisk" value="512"></property>
+    </bean>
+
+    <bean class="com.quill.springdemo.p4.autowiredbean.Cpu" id="cpu">
+        <property name="core" value="Intel i7"></property>
+    </bean>
+
+    <bean class="com.quill.springdemo.p4.autowiredbean.Phone" id="phone"
+          autowire="byName">
+    </bean>
+
+    <bean class="com.quill.springdemo.p4.autowiredbean.PhoneCpu" id="phoneCpu">
+        <property name="name" value="arm10E"></property>
+    </bean>
+
+    <bean class="com.quill.springdemo.p4.autowiredbean.Screen" id="screen111111">
+        <property name="size" value="4.7"></property>
+    </bean>
+</beans>

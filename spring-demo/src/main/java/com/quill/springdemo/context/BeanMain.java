@@ -1,6 +1,7 @@
 package com.quill.springdemo.context;
 
-import com.quill.springdemo.bean.Person;
+import com.quill.springdemo.p4.autowiredbean.Computer;
+import com.quill.springdemo.p0.bean.Person;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,7 +15,7 @@ import java.util.Arrays;
 public class BeanMain {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring0.xml");
         Person person = context.getBean(Person.class);
         System.out.println("BeanMain# person "+person);
         Person personBean = (Person) context.getBean("person");
@@ -27,5 +28,7 @@ public class BeanMain {
         System.out.println("BeanMain# --------");
         String[] beanNamesForType = context.getBeanNamesForType(Person.class);
         System.out.println(Arrays.toString(beanNamesForType));
+        Computer computer = context.getBean(Computer.class);
+        System.out.println("BeanMain# computer = "+computer);
     }
 }

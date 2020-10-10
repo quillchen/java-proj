@@ -1,11 +1,9 @@
 package com.quill.springdemo;
 
-import com.quill.springdemo.bean.Person;
+import com.quill.springdemo.p0.bean.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-
-import javax.sound.midi.Soundbank;
 
 @SpringBootApplication
 public class SpringDemoApplication {

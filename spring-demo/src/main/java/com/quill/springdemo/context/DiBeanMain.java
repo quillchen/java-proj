@@ -1,7 +1,7 @@
 package com.quill.springdemo.context;
 
-import com.quill.springdemo.dibean.Cup;
-import com.quill.springdemo.dibean.TextEditor;
+import com.quill.springdemo.p3.dibean.Cup;
+import com.quill.springdemo.p3.dibean.TextEditor;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Arrays;
@@ -13,7 +13,7 @@ import java.util.Arrays;
 public class DiBeanMain {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-di.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring3-dibean.xml");
         String[] beanDefinitionNames = context.getBeanDefinitionNames();
         System.out.println("DiBeanMain# "+ Arrays.toString(beanDefinitionNames));
         TextEditor textEditor = context.getBean(TextEditor.class);

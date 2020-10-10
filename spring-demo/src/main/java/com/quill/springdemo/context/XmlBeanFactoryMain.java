@@ -1,6 +1,6 @@
 package com.quill.springdemo.context;
 
-import com.quill.springdemo.bean.Computer;
+import com.quill.springdemo.p4.autowiredbean.Computer;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 
@@ -11,7 +11,7 @@ import org.springframework.core.io.ClassPathResource;
 public class XmlBeanFactoryMain {
 
     public static void main(String[] args) {
-        XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("spring.xml"));
+        XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("spring0.xml"));
         Computer computer = factory.getBean(Computer.class);
         System.out.println("computer = "+computer);
 

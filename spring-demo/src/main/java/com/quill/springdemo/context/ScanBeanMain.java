@@ -1,10 +1,8 @@
 package com.quill.springdemo.context;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.util.CollectionUtils;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * @Author: qigui.chen
@@ -13,7 +11,7 @@ import java.util.Collections;
 public class ScanBeanMain {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-scanbean.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring2-scanbean.xml");
         String[] beanDefinitionNames = context.getBeanDefinitionNames();
 //        for (String name:beanDefinitionNames) {
 //            System.out.println("ScanBeanMain# "+name);
